@@ -1,0 +1,33 @@
+
+# function to select video quality
+quality_select(){
+	quality=`echo -e 'low\nmedium\nhigh\naudio'| dmenu -i -p "Select quality" -fn 'roboto mono nerd font:bold:size=11'`
+	case "$quality" in
+	"low") echo "--ytdl-format=3gp $url" ;;
+	"medium") echo "--ytdl-format=webm $url" ;;
+	"high") echo "--ytdl-format=mp4 $url" ;;
+	"audio") echo "--ytdl-format=m4a $url" ;;
+	esac
+}
+
+
+url=`~/scripts/st-urlopener/./extract|dmenu -i -l 10 -p Urls -fn 'roboto mono nerd font:bold:size=11'` 
+
+[[ $url = "" ]] && exit 1
+
+choose=`echo -e 'qutebrowser\ncopy\nmpv\nts-mpv\nmpv-best-quality\nfeh\naria2c\nfirefox\nchrome'|dmenu -i -p "Open with" \
+	-fn 'roboto mono nerd font:bold:size=11'`
+
+case "$choose" in
+	"qutebrowser") qutebrowser $url ;;
+	"copy") echo "$url" | xclip -selection clipboard ;;
+	"firefox") firefox $url ;;
+	"chrome") google-chrome $url ;;
+	"ts-mpv") video=`quality_select`; notify-send "Queued video";ts mpv $video ;;
+	"mpv") video=`quality_select`; notify-send "Playing video";mpv $video ;; 
+	"mpv-best-quality") notify-send "playing video";mpv $url ;; 
+	"feh") feh $url ;;
+	"aria2c") aria2c $url ;;
+
+esac
+

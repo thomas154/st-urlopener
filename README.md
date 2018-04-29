@@ -8,7 +8,15 @@ This will only work with patched version of st with external pipe feature enable
 + Notify-send for notification (optional)
 
 # Demo
-![demo1](/demo1.gif)
++ Grabbing links from Reddit terminal viewer(rtv). 
+
+![demo1](/gifs/demo1.gif)
+
++ Grabbing links from Newsboat.
+
+![demo2](/gifs/demo2.gif)
+
+Above demo showed some use cases, but this script can be used with any terminal app or to grab links easily present on st without configuring each app individually.... 
 
 # Note
 Make sure the location in urlopener script points to the location of extract script.

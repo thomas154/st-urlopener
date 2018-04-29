@@ -22,7 +22,7 @@ case "$choose" in
 	"qutebrowser") qutebrowser $url ;;
 	"copy") echo "$url" | xclip -selection clipboard ;;
 	"firefox") firefox $url ;;
-	"chrome") google-chrome $url ;;
+	"chrome") google-chrome-stable $url ;;
 	"ts-mpv") video=`quality_select`; notify-send "Queued video";ts mpv $video ;;
 	"mpv") video=`quality_select`; notify-send "Playing video";mpv $video ;; 
 	"mpv-best-quality") notify-send "playing video";mpv $url ;; 

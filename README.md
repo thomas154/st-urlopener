@@ -8,7 +8,7 @@ This will only work with patched version of st with external pipe feature enable
 + Notify-send for notification (optional)
 
 # Demo
-comming soon..
+![demo1](/demo1.gif)
 
 # Note
 Make sure the location in urlopener script points to the location of extract script.

@@ -10,11 +10,11 @@ This will only work with patched version of st with external pipe feature enable
 ## Demo
 + Grabbing links from Reddit terminal viewer(rtv). 
 
-![demo1](/gifs/demo1.gif)
+![demo1](https://raw.githubusercontent.com/thomas154/gifs-for-repositories/master/st-urlopener-gif/demo1.gif)
 
 + Grabbing links from Newsboat.
 
-![demo2](/gifs/demo2.gif)
+![demo2](https://raw.githubusercontent.com/thomas154/gifs-for-repositories/master/st-urlopener-gif/demo2.gif)
 
 Above demo showed some use cases, but this script can be used with any terminal app or to grab links easily present on st without configuring each app individually.... 
 

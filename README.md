@@ -18,13 +18,10 @@ This will only work with patched version of st with external pipe feature enable
 
 Above demo showed some use cases, but this script can be used with any terminal app or to grab links easily present on st without configuring each app individually.... 
 
-# Note
-Make sure the location in urlopener script points to the location of extract script.
-
+# Usage 
+- Press the key bindings to execute the script on focused terminal.
 ```
-url=`~/scripts/st-urlopener/./extract|dmenu -i -l 10 -p Urls -fn 'roboto mono nerd font:bold:size=11'` 
+ Alt+u #Mine is binded to this
 ```
-change the location as per required.
 
-In my case it is present at ~/scripts/st-urlopener/
-
+You can use my st config from [here](https://github.com/thomas154/st)

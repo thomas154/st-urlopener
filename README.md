@@ -18,6 +18,13 @@ This will only work with patched version of st with external pipe feature enable
 
 Above demo showed some use cases, but this script can be used with any terminal app or to grab links easily present on st without configuring each app individually.... 
 
+## Installation
+```
+git clone https://github.com/thomas154/st-urlopener.git
+cd st-urlopener
+chmod +x urlopener extract
+```
+
 ## Usage 
 - Press the key bindings to execute the script on focused terminal.
 ```
@@ -27,7 +34,7 @@ Above demo showed some use cases, but this script can be used with any terminal 
 You can use my st patched version from [here](https://github.com/thomas154/st)
 
 ## NOTE
- Make sure you  replace
+ For script to work make sure you  replace
  ```
  ~/scripts/st-urlopener/./urlopener
  ``` 

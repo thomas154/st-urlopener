@@ -1,3 +1,4 @@
+pathToScript=`dirname "$0"`
 
 # function to select video quality
 quality_select(){
@@ -11,7 +12,7 @@ quality_select(){
 }
 
 
-url=`~/scripts/st-urlopener/./extract|dmenu -i -l 10 -p Urls -fn 'roboto mono nerd font:bold:size=11'` 
+url=`$pathToScript/extract|dmenu -i -l 10 -p Urls -fn 'roboto mono nerd font:bold:size=11'` 
 
 [[ $url = "" ]] && exit 1
 
@@ -24,7 +25,7 @@ case "$choose" in
 	"firefox") firefox $url ;;
 	"chrome") google-chrome-stable $url ;;
 	"ts-mpv") video=`quality_select`; notify-send "Queued video";ts mpv $video ;;
-	"mpv") video=`quality_select`; notify-send "Playing video";mpv $video ;; 
+	"mpv") video=`quality_select`; 	[[ $video = "" ]] && exit 1 ;notify-send "Playing video";mpv $video ;; 
 	"mpv-best-quality") notify-send "playing video";mpv $url ;; 
 	"feh") feh $url ;;
 	"aria2c") aria2c $url ;;

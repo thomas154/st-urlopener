@@ -8,11 +8,12 @@ This will only work with patched version of st with external pipe feature enable
 + Notify-send for notification (optional)
 
 ## Demo
-+ Grabbing links from Reddit terminal viewer(rtv). 
+
++ Grabbing links from Newsboat.
 
 ![demo1](https://raw.githubusercontent.com/thomas154/gifs-for-repositories/master/st-urlopener-gif/demo1.gif)
 
-+ Grabbing links from Newsboat.
++ Grabbing links from Reddit terminal viewer(rtv). 
 
 ![demo2](https://raw.githubusercontent.com/thomas154/gifs-for-repositories/master/st-urlopener-gif/demo2.gif)
 
